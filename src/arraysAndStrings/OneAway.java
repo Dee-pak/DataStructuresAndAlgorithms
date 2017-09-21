@@ -21,7 +21,7 @@ public class OneAway {
 	 */
 	public static void main(String[] args) {
 
-		System.out.println(isOneAway("pale", "bale"));
+		System.out.println(isOneAway("kdeepak", "deepak"));
 		
 	}
 	
@@ -50,8 +50,20 @@ public class OneAway {
 		return true;
 	}
 	
-	private static boolean checkInsertion(String string1, String string2){
-		return false;
+	private static boolean checkInsertion(String smaller, String larger){
+		int index1 = 0, index2 = 0;
+		while(index2 < larger.length() && index1 < smaller.length()){
+			if(smaller.charAt(index1) != larger.charAt(index2)){
+				if(index1 != index2){
+					return false;
+				}
+				index2++;
+			}else{
+				index1++;
+				index2++;
+			}
+		}
+		return true;
 	}
 
 }
