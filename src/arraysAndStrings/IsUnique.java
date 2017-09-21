@@ -11,7 +11,7 @@ package arraysAndStrings;
 public class IsUnique {
 	
 	public static void main(String[] args){
-		System.out.println(isUnique("abcdeefghijklmnopqrstuvwxyz!"));
+		System.out.println(isUnique("a bcdeefghijklmnopqrstuvwxyz!"));
 	}
 
 	private static boolean isUnique(String stringToCheck) {
@@ -22,6 +22,7 @@ public class IsUnique {
 		boolean[] boolArray = new boolean[256];
 		for( int i = 0 ; i < stringToCheck.length() ; i++ ){
 			int value = stringToCheck.charAt(i);
+			System.out.println(value);
 			if(boolArray[value]){
 				return false;
 			}
