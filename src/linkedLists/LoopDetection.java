@@ -24,10 +24,10 @@ public class LoopDetection {
 		list.addNodeAtHead(14);
 		list.addNodeAtHead(15);
 		list.addNodeAtHead(16);
+		list.printForward();
 		System.out.println();
 		Node tail = list.getTail();
 		tail.next = list.head.next.next;
-		list.printForward();
 		try{
 			System.out.println(detectLoop(list).data);
 		}catch (NullPointerException e) {
