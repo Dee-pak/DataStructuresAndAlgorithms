@@ -63,6 +63,14 @@ public class LinkedList {
 		}
 		return count;
 	}
+	
+	public Node getTail(){
+		Node traversal = head;
+		while(traversal.next != null){
+			traversal = traversal.next;
+		}
+		return traversal;
+	}
 
 	public void addNodeAtPosition(int data, int position) {
 		if (position - 1 > getListSize()) {
@@ -100,11 +108,24 @@ public class LinkedList {
 		}
 	}
 
-	public void printList() {
+	public void printForward() {
 		Node first = head;
 		while (first != null) {
 			System.out.print(first.data + " -> ");
 			first = first.next;
+		}
+		System.out.print("null");
+	}
+	
+	public void printReverse(){
+		Node first = head;
+		while(first.next != null){
+			first = first.next;
+		}
+		Node last = first;
+		while(last != null){
+			System.out.print(last.data + " <- ");
+			last = last.prev;
 		}
 		System.out.print("null");
 	}

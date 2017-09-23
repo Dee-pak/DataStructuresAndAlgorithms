@@ -29,7 +29,7 @@ public class ReturnKthToLast {
 		list.addNodeAtHead(398);;
 		list.addNodeAtHead(13);
 		list.addNodeAtHead(3);
-		list.printList();
+		list.printForward();
 		System.out.println();
 		int KthToLast = returnKthToLastIteratively(list, 3);
 		//int KthToLast = printKthToLastElement(list.head, 3);

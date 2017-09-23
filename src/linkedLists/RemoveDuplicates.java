@@ -34,10 +34,10 @@ public class RemoveDuplicates {
 		list.addNodeAtHead(3);;
 		list.addNodeAtHead(13);
 		list.addNodeAtHead(3);
-		list.printList();
+		list.printForward();
 		removeDuplicates1(list);
 		System.out.println();
-		list.printList();
+		list.printForward();
 	}
 	
 	public static void removeDuplicates(LinkedList list){

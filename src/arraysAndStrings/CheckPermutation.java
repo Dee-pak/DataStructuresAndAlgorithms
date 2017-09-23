@@ -17,7 +17,6 @@ public class CheckPermutation {
 		String string1 = "abcdeppppp";
 		String string2 = "pppppcdbae";
 		System.out.println(checkPermutation2(string1, string2));
-
 	}
 
 	//Solution1

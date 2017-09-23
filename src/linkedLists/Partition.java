@@ -25,9 +25,11 @@ public class Partition {
 		for(int i = 1 ; i <= 15 ; i++){
 			list.addNodeAtHead(i*10);
 		}
-		list.printList();
+		list.printForward();
 		System.out.println();
-		partitionList1(list, 70);
+		System.out.println(list.getTail().data);
+		//list.printReverse();
+		//partitionList1(list, 70);
 	}
 	
 	public static void partitionList(LinkedList list, int partition){
@@ -47,7 +49,7 @@ public class Partition {
 			smallerTraversal = smallerTraversal.next;
 		}
 		smallerTraversal.next = higherList.head;
-		smallerList.printList();
+		smallerList.printForward();
 	}
 	
 	public static void partitionList1(LinkedList list, int partition){
@@ -61,7 +63,7 @@ public class Partition {
 			}
 			traversal = traversal.next;
 		}
-		newList.printList();
+		newList.printForward();
 	}
 
 }

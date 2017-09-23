@@ -35,12 +35,12 @@ public class DeleteMiddleNode {
 		list.addNodeAtHead(398);;
 		list.addNodeAtHead(13);
 		list.addNodeAtHead(3);
-		list.printList();
+		list.printForward();
 		System.out.println();
 		Node nodeToDelete = list.head.next.next.next.next;
 		System.out.println("Node to delete: " + nodeToDelete.data);
 		deleteMiddleNode(nodeToDelete);
-		list.printList();
+		list.printForward();
 	}
 	
 	public static boolean deleteMiddleNode(Node node){
