@@ -3,6 +3,9 @@
  */
 package linkedLists;
 
+import java.awt.List;
+import java.util.NoSuchElementException;
+
 /**
  * @author deepakkhobragade
  *
@@ -71,6 +74,15 @@ public class LinkedList {
 		}
 		return traversal;
 	}
+	
+	public Node getHead(){
+		if(head == null){
+			System.out.println("Empty List!");
+			throw new NoSuchElementException();
+		}else{
+			return head;
+		}
+	}
 
 	public void addNodeAtPosition(int data, int position) {
 		if (position - 1 > getListSize()) {
@@ -105,6 +117,23 @@ public class LinkedList {
 				traversal = traversal.next;
 			}
 			traversal.next = traversal.next.next;
+		}
+	}
+	
+	public Node getNodeAtPosition(int position){
+		if(position > getListSize() || position < 1){
+			System.out.println("Position less/greater than list size!");
+			throw new NoSuchElementException();
+		}else if(position == 1){
+			return getHead();
+		}else if( position == getListSize()){
+			return getTail();
+		}else{
+			Node traversal = head;
+			for( int i = 1 ; i != position ; i++){
+				traversal = traversal.next;
+			}
+			return traversal;
 		}
 	}
 

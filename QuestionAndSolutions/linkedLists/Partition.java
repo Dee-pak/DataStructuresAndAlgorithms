@@ -27,7 +27,8 @@ public class Partition {
 		}
 		list.printForward();
 		System.out.println();
-		System.out.println(list.getTail().data);
+		//System.out.println(list.getTail().data);
+		System.out.println(list.getNodeAtPosition(0).data);
 		//list.printReverse();
 		//partitionList1(list, 70);
 	}

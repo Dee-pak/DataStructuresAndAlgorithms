@@ -21,17 +21,20 @@ public class Stack {
 	}
 	
 	StackNode top;
+	private int size = 0;
 	public Stack(){
 		this.top = null;
 	}
 	
 	public void push(int data){
+		size++;
 		StackNode newNode = new StackNode(data);
 		newNode.next = top;
 		top = newNode;
 	}
 	
 	public int pop(){
+		size--;
 		if(top == null){
 			throw new EmptyStackException();
 		}else{
@@ -41,6 +44,7 @@ public class Stack {
 		}
 	}
 	
+	
 	public int peek(){
 		return top.data;
 	}
@@ -49,8 +53,13 @@ public class Stack {
 		return top == null;
 	}
 	
+	public int size(){
+		return size;
+	}
+	
 	public void print(){
 		if(top == null){
+			System.out.println("Stack is Empty!");
 			throw new EmptyStackException();
 		}
 		StackNode traversal = top;
